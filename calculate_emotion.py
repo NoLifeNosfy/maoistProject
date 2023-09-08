@@ -6,7 +6,8 @@ def calculate_emotion(input_path, output_path, year=""):
 
 
     if year != "":
-        df = df[df['发布时间'].str.startswith(str(year))]
+        # df = df[df['发布时间'].str.startswith('2015') | df['发布时间'].str.startswith('2016') | df['发布时间'].str.startswith('2017') | df['发布时间'].str.startswith('2018')]
+        df = df[df['发布时间'].str.startswith('2019') |df['发布时间'].str.startswith('2020') | df['发布时间'].str.startswith('2021') | df['发布时间'].str.startswith('2022') | df['发布时间'].str.startswith('2023')]
         print(df)
 
     cnt = 0
@@ -61,14 +62,15 @@ def calculate_emotion(input_path, output_path, year=""):
 
 
 if __name__ == '__main__':  
-    calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/总.svg')
-    calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2015.svg', 2015)
-    calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2016.svg', 2016)
-    calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2017.svg', 2017)
-    calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2018.svg', 2018)
-    calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2019.svg',2019)
-    calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2020.svg',2020)
-    calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2021.svg',2021)
-    calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2022.svg',2022)
-    calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2023.svg',2023)
+    calculate_emotion("data/weibo/企业/企业新1.csv", 'data/output/企业/疫情后.svg', 2019)
+
+    # calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2015.svg', 2015)
+    # calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2016.svg', 2016)
+    # calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2017.svg', 2017)
+    # calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2018.svg', 2018)
+    # calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2019.svg',2019)
+    # calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2020.svg',2020)
+    # calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2021.svg',2021)
+    # calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2022.svg',2022)
+    # calculate_emotion("data/weibo/民企/民企新1.csv",'data/output/民企/2023.svg',2023)
 
